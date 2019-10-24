@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
-
 const requireLogin = require('../middlewares/requireLogin');
-
+const cleanCache = require('../middlewares/cleanCache');
 
 const Blog = mongoose.model('Blog');
 

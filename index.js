@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const keys = require('./config/keys');
 
 require('./models/User');
@@ -27,6 +28,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(cors());
 
 require('./routes/authRoutes')(app);
 require('./routes/blogRoutes')(app);

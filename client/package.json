@@ -2,9 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
   "dependencies": {
-    "axios": "0.19.0",
+    "axios": "0.18.0",
     "materialize-css": "0.100.2",
     "react": "*",
     "react-dom": "*",
@@ -13,7 +12,8 @@
     "react-scripts": "*",
     "redux": "*",
     "redux-form": "*",
-    "redux-thunk": "*"
+    "redux-thunk": "*",
+    "http-proxy-middleware": "0.20.0"
   },
   "scripts": {
     "start": "react-scripts start",

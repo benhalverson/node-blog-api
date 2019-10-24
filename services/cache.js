@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions */
+/* eslint-disable prefer-rest-params */
 /* eslint-disable new-cap */
 /* eslint-disable no-new */
 /* eslint-disable no-console */
@@ -23,7 +23,6 @@ mongoose.Query.prototype.cache = function (options = {}) {
 };
 
 mongoose.Query.prototype.exec = async function () {
-  // eslint-disable-next-line no-unused-expressions
   if (!this.useCache) {
     return exec.apply(this, arguments);
   }
@@ -35,10 +34,10 @@ mongoose.Query.prototype.exec = async function () {
 
   // See if we have a value for 'key' in redis
   const cacheValue = await client.hget(this.hashKey, key);
-  // if we do return it
   if (cacheValue) {
     console.log('cached executed...');
     const doc = JSON.parse(cacheValue);
+    console.log(doc);
     return Array.isArray(doc)
       ? doc.map((d) => new this.model(d))
       : new this.model(doc);
@@ -49,4 +48,11 @@ mongoose.Query.prototype.exec = async function () {
   console.log('result', result);
   client.hset(this.hashKey, key, JSON.stringify(result), 'EX', 10);
   return result;
+};
+
+module.exports = {
+  clearHash(hashKey) {
+    client.del(JSON.stringify(hashKey));
+    console.log(hashKey);
+  },
 };
