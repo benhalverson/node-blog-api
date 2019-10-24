@@ -4,8 +4,8 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
-    "axios": "^0.19.0",
-    "materialize-css": "^0.100.2",
+    "axios": "0.19.0",
+    "materialize-css": "0.100.2",
     "react": "*",
     "react-dom": "*",
     "react-redux": "*",
