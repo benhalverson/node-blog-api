@@ -12,7 +12,7 @@ class CustomPage {
     return new Proxy(customPage, {
       get(target, property) {
         return customPage[property] || browser[property] || page[property];
-      },
+      }
     });
   }
 
@@ -30,7 +30,7 @@ class CustomPage {
   }
 
   async getContentsOf(selector) {
-    return this.page.$eval(selector, (el) => el.innerHTML);
+    return this.page.$eval(selector, el => el.innerHTML);
   }
 }
 
