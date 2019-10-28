@@ -9,7 +9,8 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "cors": "2.8.5",
     "express": "^4.15.3",
     "jest": "^25.0.0",
+    "keygrip": "1.1.0",
     "migrate-mongoose": "^4.0.0",
     "mongoose": "^5.7.6",
     "nodemon": "^1.11.0",
@@ -29,11 +31,18 @@
     "path-parser": "^2.0.2",
     "puppeteer": "^1.20.0",
     "redis": "^2.8.0",
+    "safe-buffer": "5.2.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
     "eslint": "6.5.1",
     "eslint-config-airbnb-base": "14.0.0",
     "eslint-plugin-import": "2.18.2"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./tests/setup.js"
+    ],
+    "testEnvironment": "node"
   }
 }
