@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 const Page = require('./helpers/page');
 
@@ -59,8 +60,13 @@ describe('When logged in', () => {
       expect(contentError).toEqual('You must provide a value');
     });
   });
+  describe('User is not logged in', () => {
+    test.only('when NOT signed in, creating a post results in an error', async () => {
+      const result = await page.get('/api/blogs');
+      console.log(result);
+      // expect(result).toEqual({ error: 'You must log in!' });
+    });
+  });
 });
-
-xtest('when NOT signed in, creating a post results in an error', async () => {});
 
 xtest('when NOT signed in, viewing a post results in an error', async () => {});
