@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "0.18.1",
-    "materialize-css": "0.100.2",
+    "materialize-css": "1.0.0",
     "react": "*",
     "react-dom": "*",
     "react-redux": "*",
