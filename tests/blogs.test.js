@@ -8,7 +8,7 @@ describe('When logged in', () => {
   beforeEach(async () => {
     jest.setTimeout(30000);
     page = await Page.build();
-    await page.goto('localhost:3000');
+    await page.goto('http://localhost:3000');
     await page.login();
     await page.click('a.btn-floating');
   });
