@@ -5,8 +5,8 @@
   "dependencies": {
     "axios": "0.18.1",
     "materialize-css": "1.0.0",
-    "react": "*",
-    "react-dom": "*",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
     "react-redux": "*",
     "react-router-dom": "*",
     "react-scripts": "*",

@@ -14,6 +14,8 @@ export const handleToken = (token) => async (dispatch) => {
 };
 
 export const submitBlog = (values, history) => async (dispatch) => {
+  // TODO create presigned AWS S3 url
+
   const res = await axios.post('/api/blogs', values);
 
   history.push('/blogs');
