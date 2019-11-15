@@ -22,7 +22,7 @@ describe('When logged in', () => {
     expect(label).toEqual('Blog Title');
   });
 
-  xtest('when signed in, enter valid inputs into form', async () => {
+  test('when signed in, enter valid inputs into form', async () => {
     await page.login();
   });
 
@@ -61,12 +61,10 @@ describe('When logged in', () => {
     });
   });
   describe('User is not logged in', () => {
-    test.only('when NOT signed in, creating a post results in an error', async () => {
-      const result = await page.get('/api/blogs');
-      console.log(result);
+    test('when NOT signed in, creating a post results in an error', async () => {
       // expect(result).toEqual({ error: 'You must log in!' });
     });
   });
 });
 
-xtest('when NOT signed in, viewing a post results in an error', async () => {});
+// xtest('when NOT signed in, viewing a post results in an error', async () => {});
