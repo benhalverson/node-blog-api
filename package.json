@@ -27,7 +27,7 @@
     "nodemon": "^2.0.0",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^2.0.0",
-    "path-parser": "^4.0.0",
+    "path-parser": "^5.0.0",
     "puppeteer": "^2.0.0",
     "redis": "^2.8.0",
     "safe-buffer": "5.2.0",
