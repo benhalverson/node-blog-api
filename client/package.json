@@ -13,7 +13,7 @@
     "redux": "*",
     "redux-form": "*",
     "redux-thunk": "*",
-    "http-proxy-middleware": "0.20.0"
+    "http-proxy-middleware": "0.21.0"
   },
   "scripts": {
     "start": "react-scripts start",
