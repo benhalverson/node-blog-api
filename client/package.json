@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "0.18.1",
+    "axios": "0.20.0",
+    "http-proxy-middleware": "1.0.5",
     "materialize-css": "1.0.0",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-redux": "*",
     "react-router-dom": "*",
-    "react-scripts": "*",
+    "react-scripts": "3.4.3",
     "redux": "*",
     "redux-form": "*",
-    "redux-thunk": "*",
-    "http-proxy-middleware": "0.20.0"
+    "redux-thunk": "*"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "3.6.0-beta"
   }
 }

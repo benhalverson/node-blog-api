@@ -32,6 +32,7 @@ app.use(cors());
 
 require('./routes/authRoutes')(app);
 require('./routes/blogRoutes')(app);
+require('./routes/uploadRoutes')(app);
 require('./services/cache');
 
 if (['production', 'ci'].includes(process.env.NODE_ENV)) {
