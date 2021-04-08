@@ -21,12 +21,16 @@ module.exports = (app) => {
       blogs,
     });
   });
-  app.get('/api/blogs', requireLogin, async (req, res) => {
-    const blogs = await Blog.find({ _user: req.user.id }).cache();
-    res.send(blogs);
+  app.get('/api/blogs', async (req, res) => {
+    try {
+      const blogs = await Blog.find({ _user: req.user.id }).cache();
+      res.send(blogs);
+    } catch (e) {
+      console.error('Error', e);
+    }
   });
 
-  app.post('/api/blogs', requireLogin, async (req, res) => {
+  app.post('/api/blogs', async (req, res) => {
     const { title, content, imageUrl } = req.body;
 
     const blog = new Blog({

@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const AWS = require('aws-sdk');
-const uuid = require('uuid/v1');
+const uuid = require('uuid');
 
 const keys = require('../config/keys');
 const requireLogin = require('../middlewares/requireLogin');
