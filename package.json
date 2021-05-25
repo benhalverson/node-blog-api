@@ -20,7 +20,7 @@
     "cookie-session": "^2.0.0-beta.2",
     "cors": "2.8.5",
     "express": "^4.15.3",
-    "jest": "^26.0.0",
+    "jest": "^27.0.0",
     "keygrip": "1.1.0",
     "migrate-mongoose": "^4.0.0",
     "mongoose": "^5.7.6",
